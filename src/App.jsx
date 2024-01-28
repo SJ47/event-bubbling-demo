@@ -36,7 +36,7 @@ function App() {
           `Event CAPTURE Phase: ${event.currentTarget.nodeName.slice(1)}`
         );
         console.log(`target: ${event.target.id}`);
-        // alert("Logging that an element was clicked!");
+        // alert("CAPTURE PHASE: Logging that an element was clicked!");
 
         break;
       case 2:
@@ -50,7 +50,7 @@ function App() {
           `Event BUBBLING Phase: ${event.currentTarget.nodeName.slice(1)}`
         );
         console.log(`target: ${event.target.id}`);
-        alert("Logging that an element was clicked!");
+        alert("BUBBLE PHASE: Logging that an element was clicked!");
         break;
       default:
         console.log(

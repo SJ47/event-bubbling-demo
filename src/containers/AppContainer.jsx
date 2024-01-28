@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { displayEvent } from "../utils/displayUtils";
 import STYLES from "./AppContainer.module.scss";
 
 const AppContainer = () => {
+  const [enableStopPropagationInnerBox, setEnableStopPropagationInnerBox] =
+    useState(false);
+
   const handleAppContainerClick = (event) => {
     displayEvent(event);
     // event.stopPropagation();
@@ -9,8 +13,6 @@ const AppContainer = () => {
   };
   const handleAppContainerCapturedClick = (event) => {
     displayEvent(event);
-    // event.stopPropagation();
-    // alert("App Container Clicked");
   };
 
   const handleOuterBoxClick = (event) => {
@@ -20,19 +22,22 @@ const AppContainer = () => {
   };
   const handleOuterBoxCaptureClick = (event) => {
     displayEvent(event);
-    // event.stopPropagation();
-    // alert("Outer Box Clicked");
   };
 
   const handleInnerBoxClick = (event) => {
+    enableStopPropagationInnerBox && event.stopPropagation();
     displayEvent(event);
-    // event.stopPropagation();
     alert("Inner Box Clicked");
   };
+
   const handleInnerBoxCaptureClick = (event) => {
     displayEvent(event);
-    // event.stopPropagation();
-    // alert("Inner Box Clicked");
+  };
+
+  const handleStopPropagationInnerBox = (event) => {
+    event.stopPropagation();
+    setEnableStopPropagationInnerBox(!enableStopPropagationInnerBox);
+    event.stopImmediatePropagation;
   };
 
   return (
@@ -57,6 +62,16 @@ const AppContainer = () => {
           onClickCapture={handleInnerBoxCaptureClick}
         >
           <div className={STYLES.title}>INNER BOX</div>
+          <label>
+            <input
+              type='checkbox'
+              checked={enableStopPropagationInnerBox}
+              onMouseLeave={handleStopPropagationInnerBox}
+              onChange={handleStopPropagationInnerBox}
+              id='checkbox-id'
+            />
+            stopPropagation
+          </label>
         </div>
       </div>
     </div>
