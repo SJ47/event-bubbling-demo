@@ -1,0 +1,101 @@
+.container {
+  margin-top: 2em;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yellowCircle {
+  padding: 2em;
+  width: 2em;
+  height: 2em;
+  background: yellow;
+  border: 1px solid black;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.redCircle {
+  padding: 4em;
+  width: 2em;
+  height: 2em;
+  background: red;
+  border: 1px solid black;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.blueCircle {
+  padding: 6em;
+  width: 2em;
+  height: 2em;
+  background: blue;
+  border: 1px solid black;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.blackCircle {
+  padding: 8em;
+  width: 2em;
+  height: 2em;
+  background: black;
+  border: 1px solid white;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.whiteCircle {
+  padding: 10em;
+  width: 2em;
+  height: 2em;
+  background: white;
+  border: 1px solid black;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  text-align: center;
+}
+
+.outerScoreRed {
+  position: absolute;
+  margin-left: 6em;
+  color: wheat;
+}
+
+.outerScoreBlue {
+  position: absolute;
+  margin-left: 10em;
+  color: wheat;
+}
+
+.outerScoreBlack {
+  position: absolute;
+  margin-left: 14em;
+  color: wheat;
+}
+
+.outerScoreWhite {
+  position: absolute;
+  margin-left: 18em;
+  color: black;
+}
+
+.resetScore {
+  padding: 0.5em 1em;
+  margin-right: 2em;
+  margin-top: 1em;
+}
