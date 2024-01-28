@@ -1,4 +1,6 @@
 export const displayEvent = (event) => {
+  console.log("------------");
+
   switch (event.eventPhase) {
     case 1:
       console.log(`CurrentTarget: ${event.currentTarget.id}`);

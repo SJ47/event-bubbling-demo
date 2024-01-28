@@ -4,6 +4,8 @@ import AppContainer from "./containers/AppContainer";
 
 function App() {
   const handleWindowClick = (event) => {
+    console.log("------------");
+
     console.log(`CurrentTarget: ${event.currentTarget.Window.name}`);
     switch (event.eventPhase) {
       case 1:
@@ -25,6 +27,8 @@ function App() {
   };
 
   const handleDocumentClick = (event) => {
+    console.log("------------");
+
     console.log(`CurrentTarget: ${event.currentTarget.nodeName.slice(1)}`);
     switch (event.eventPhase) {
       case 1:
@@ -44,6 +48,7 @@ function App() {
           `Event BUBBLING Phase: ${event.currentTarget.nodeName.slice(1)}`
         );
         console.log(`target: ${event.target.id}`);
+        alert("Logging that an element was clicked!");
         break;
       default:
         console.log(
