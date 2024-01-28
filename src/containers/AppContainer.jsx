@@ -1,21 +1,43 @@
-import Box from "../components/box/Box";
-import { displayEvents, displayEventPhase } from "../utils/displayUtils";
+import { displayEvent } from "../utils/displayUtils";
 import STYLES from "./AppContainer.module.scss";
 
 const AppContainer = () => {
-  const handleClick = (event) => {
-    // console.log(`Event ${event.eventPhase} at ${event.currentTarget.id}`);
-    displayEvents(event);
-    displayEventPhase(event);
-
+  const handleAppContainerClick = (event) => {
+    displayEvent(event);
     // event.stopPropagation();
   };
+
+  const handleOuterBoxClick = (event) => {
+    displayEvent(event);
+    // event.stopPropagation();
+  };
+
+  const handleInnerBoxClick = (event) => {
+    displayEvent(event);
+    // event.stopPropagation();
+  };
+
   return (
-    <div id='app-container' className={STYLES.appContainer}>
+    <div
+      id='app-container'
+      className={STYLES.appContainer}
+      onClick={handleAppContainerClick}
+      onClickCapture={handleAppContainerClick}
+    >
       <div className={STYLES.title}>APP CONTAINER</div>
-      <div className={STYLES.boxOuter}>
+      <div
+        id='outer-box'
+        className={STYLES.boxOuter}
+        onClick={handleOuterBoxClick}
+        onClickCapture={handleOuterBoxClick}
+      >
         <div className={STYLES.title}>OUTER BOX</div>
-        <div className={STYLES.boxInner}>
+        <div
+          id='inner-box'
+          className={STYLES.boxInner}
+          onClick={handleInnerBoxClick}
+          onClickCapture={handleInnerBoxClick}
+        >
           <div className={STYLES.title}>INNER BOX</div>
         </div>
       </div>

@@ -1,13 +1,13 @@
 import { useState } from "react";
 import STYLES from "./InnerBox.module.scss";
-import { displayEventPhase, displayEvents } from "../../../utils/displayUtils";
+// import { displayEventPhase, displayEvents } from "../../../utils/displayUtils";
 
 const InnerBox = () => {
   const [enableStopPropagation, setEnableStopPropagation] = useState(false);
 
   const handleInnerBoxClick = (event) => {
-    displayEvents(event);
-    displayEventPhase(event);
+    // displayEvents(event);
+    // displayEventPhase(event);
     enableStopPropagation && event.stopPropagation();
   };
 

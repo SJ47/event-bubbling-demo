@@ -1,51 +1,54 @@
 import { useEffect } from "react";
 import STYLES from "./App.module.scss";
 import AppContainer from "./containers/AppContainer";
-import { displayEventPhase, displayEvents } from "./utils/displayUtils";
 
 function App() {
   const handleWindowClick = (event) => {
     console.log(`CurrentTarget: ${event.currentTarget.Window.name}`);
     switch (event.eventPhase) {
       case 1:
-        console.log(`Event CAPTURE PHASE at ${event.currentTarget.Window.name}`);
+        console.log(`Event CAPTURE Phase: ${event.currentTarget.Window.name}`);
         console.log(`target: ${event.target.id}`);
         break;
       case 2:
-        console.log(
-          `Event TARGET PHASE reached at ${event.currentTarget.Window.name}`
-        );
+        console.log(`Event TARGET Phase: ${event.currentTarget.Window.name}`);
         console.log(`target: ${event.target.id}`);
         break;
       case 3:
-        console.log(`Event BUBBLING PHASE at ${event.currentTarget.Window.name}`);
+        console.log(`Event BUBBLING Phase: ${event.currentTarget.Window.name}`);
         console.log(`target: ${event.target.id}`);
         break;
       default:
-        console.log(
-          `Event doing NOTHING at ${event.currentTarget.iWindow.named}`
-        );
+        console.log(`Event doing NOTHING: ${event.currentTarget.Window.name}`);
         console.log(`target: ${event.target.id}`);
     }
   };
 
   const handleDocumentClick = (event) => {
-    console.log(`CurrentTarget: ${event.currentTarget.nodeName}`);
+    console.log(`CurrentTarget: ${event.currentTarget.nodeName.slice(1)}`);
     switch (event.eventPhase) {
       case 1:
-        console.log(`Event CAPTURE PHASE at ${event.currentTarget.nodeName}`);
+        console.log(
+          `Event CAPTURE Phase: ${event.currentTarget.nodeName.slice(1)}`
+        );
+        console.log(`target: ${event.target.id}`);
         break;
       case 2:
         console.log(
-          `Event TARGET PHASE reached at ${event.currentTarget.nodeName}`
+          `Event TARGET Phase: ${event.currentTarget.nodeName.slice(1)}`
         );
+        console.log(`target: ${event.target.id}`);
         break;
       case 3:
-        console.log(`Event BUBBLING PHASE at ${event.currentTarget.nodeName}`);
-
+        console.log(
+          `Event BUBBLING Phase: ${event.currentTarget.nodeName.slice(1)}`
+        );
+        console.log(`target: ${event.target.id}`);
         break;
       default:
-        console.log(`Event doing NOTHING at ${event.currentTarget.nodeName}`);
+        console.log(
+          `Event doing NOTHING: ${event.currentTarget.nodeName.slice(1)}`
+        );
     }
   };
 
