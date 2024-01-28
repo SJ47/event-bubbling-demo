@@ -1,0 +1,39 @@
+.appContainer {
+  // border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #7e9a9a;
+}
+
+.boxOuter {
+  width: 20em;
+  height: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // border: 2px solid grey;
+  background: #2a6592;
+  margin: 5em 0;
+}
+
+.boxInner {
+  width: 10em;
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // border: 2px solid grey;
+  background-color: #8ec3eb;
+}
+
+.title {
+  position: absolute;
+  align-self: flex-start;
+  margin-top: 1em;
+  // border: 1px solid grey;
+  border-radius: 25px;
+  background: #db9833;
+  padding: 0.5em 1em;
+  color: wheat;
+}
