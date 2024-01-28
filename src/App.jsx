@@ -36,6 +36,8 @@ function App() {
           `Event CAPTURE Phase: ${event.currentTarget.nodeName.slice(1)}`
         );
         console.log(`target: ${event.target.id}`);
+        // alert("Logging that an element was clicked!");
+
         break;
       case 2:
         console.log(
