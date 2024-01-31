@@ -8,7 +8,6 @@ const AppContainer = () => {
 
   const handleAppContainerClick = (event) => {
     displayEvent(event);
-    // event.stopPropagation();
     alert("App Container Clicked");
   };
   const handleAppContainerCapturedClick = (event) => {
@@ -17,7 +16,6 @@ const AppContainer = () => {
 
   const handleOuterBoxClick = (event) => {
     displayEvent(event);
-    // event.stopPropagation();
     alert("Outer Box Clicked");
   };
   const handleOuterBoxCaptureClick = (event) => {

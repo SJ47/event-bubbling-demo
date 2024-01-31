@@ -4,17 +4,17 @@ const AppCalc = () => {
   const [counter, setCounter] = useState(0);
   const [enableStopPropagation, setEnableStopPropagation] = useState(false);
 
-  const HandleWhiteScore = (event) => {
+  const handleWhiteScore = (event) => {
     enableStopPropagation && event.stopPropagation();
     setCounter((prevCounter) => prevCounter + 1);
   };
 
-  const HandleBlackScore = (event) => {
+  const handleBlackScore = (event) => {
     enableStopPropagation && event.stopPropagation();
     setCounter((prevCounter) => prevCounter + 2);
   };
 
-  const HandleBlueScore = (event) => {
+  const handleBlueScore = (event) => {
     enableStopPropagation && event.stopPropagation();
     setCounter((prevCounter) => prevCounter + 3);
   };
@@ -32,11 +32,11 @@ const AppCalc = () => {
   return (
     <>
       <div className={STYLES.container}>
-        <div className={STYLES.whiteCircle} onClick={HandleWhiteScore}>
+        <div className={STYLES.whiteCircle} onClick={handleWhiteScore}>
           <span className={STYLES.outerScoreWhite}>1</span>
-          <div className={STYLES.blackCircle} onClick={HandleBlackScore}>
+          <div className={STYLES.blackCircle} onClick={handleBlackScore}>
             <span className={STYLES.outerScoreBlack}>2</span>
-            <div className={STYLES.blueCircle} onClick={HandleBlueScore}>
+            <div className={STYLES.blueCircle} onClick={handleBlueScore}>
               <span className={STYLES.outerScoreBlue}>3</span>
               <div className={STYLES.redCircle} onClick={handleRedScore}>
                 <span className={STYLES.outerScoreRed}>5</span>

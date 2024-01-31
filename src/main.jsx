@@ -9,7 +9,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <div id='document' className={STYLES.container}>
       <span className={STYLES.title}>DOCUMENT</span>
     </div>
-    {/* <App /> */}
+    {/* App = console logs and AppCalc is the target counter demo - uncomment the one you want and comment out the other */}
+    {/* <App /> */} 
     <AppCalc />
   </React.StrictMode>
 );
